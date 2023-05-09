@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		35F4622E2A0A407600D7088B /* DeckCheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */; };
-		35F462302A0A407600D7088B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622F2A0A407600D7088B /* ContentView.swift */; };
+		35F462302A0A407600D7088B /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622F2A0A407600D7088B /* DeckListView.swift */; };
 		35F462322A0A407700D7088B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F462312A0A407700D7088B /* Assets.xcassets */; };
 		35F462352A0A407700D7088B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F462342A0A407700D7088B /* Preview Assets.xcassets */; };
 		35F462402A0A407700D7088B /* DeckCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4623F2A0A407700D7088B /* DeckCheckerTests.swift */; };
 		35F4624A2A0A407700D7088B /* DeckCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462492A0A407700D7088B /* DeckCheckerUITests.swift */; };
 		35F4624C2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4624B2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift */; };
+		35F462592A0A41D800D7088B /* DeckCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462582A0A41D800D7088B /* DeckCheckView.swift */; };
+		35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4625A2A0A422700D7088B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		35F4622A2A0A407600D7088B /* DeckChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerApp.swift; sourceTree = "<group>"; };
-		35F4622F2A0A407600D7088B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35F4622F2A0A407600D7088B /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
 		35F462312A0A407700D7088B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F462342A0A407700D7088B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35F462362A0A407700D7088B /* DeckChecker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeckChecker.entitlements; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		35F462452A0A407700D7088B /* DeckCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeckCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F462492A0A407700D7088B /* DeckCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerUITests.swift; sourceTree = "<group>"; };
 		35F4624B2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35F462582A0A41D800D7088B /* DeckCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckView.swift; sourceTree = "<group>"; };
+		35F4625A2A0A422700D7088B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */,
-				35F4622F2A0A407600D7088B /* ContentView.swift */,
+				35F4622F2A0A407600D7088B /* DeckListView.swift */,
+				35F462582A0A41D800D7088B /* DeckCheckView.swift */,
+				35F4625A2A0A422700D7088B /* SettingsView.swift */,
 				35F462312A0A407700D7088B /* Assets.xcassets */,
 				35F462362A0A407700D7088B /* DeckChecker.entitlements */,
 				35F462332A0A407700D7088B /* Preview Content */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F462302A0A407600D7088B /* ContentView.swift in Sources */,
+				35F462302A0A407600D7088B /* DeckListView.swift in Sources */,
+				35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */,
+				35F462592A0A41D800D7088B /* DeckCheckView.swift in Sources */,
 				35F4622E2A0A407600D7088B /* DeckCheckerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

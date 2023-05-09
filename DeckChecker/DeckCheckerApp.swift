@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DeckCheckerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      DeckListView()
     }
+    Settings {
+      SettingsView()
+    }
+  }
 }
