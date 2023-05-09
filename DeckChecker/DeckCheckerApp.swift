@@ -11,7 +11,7 @@ import SwiftUI
 struct DeckCheckerApp: App {
   var body: some Scene {
     WindowGroup {
-      DeckListView()
+      DecksView()
     }
     Settings {
       SettingsView()

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DecksView.swift
 //  DeckChecker
 //
 //  Created by Leon on 2023/5/9.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeckListView: View {
+struct DecksView: View {
   var body: some View {
     VStack {
       Image(systemName: "globe")
@@ -21,8 +21,8 @@ struct DeckListView: View {
   }
 }
 
-struct DeckListView_Previews: PreviewProvider {
+struct DecksView_Previews: PreviewProvider {
   static var previews: some View {
-    DeckListView()
+    DecksView()
   }
 }
