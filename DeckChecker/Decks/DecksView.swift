@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DecksView: View {
+  @StateObject var decksOO = DecksOO()
+  
   var body: some View {
     VStack {
       Image(systemName: "globe")
@@ -18,6 +20,9 @@ struct DecksView: View {
     .padding()
     .frame(minWidth: 400, idealWidth: 600, maxWidth: .infinity,
            minHeight: 300, idealHeight: 400, maxHeight: .infinity)
+    .onAppear {
+      decksOO.fetchDecks()
+    }
   }
 }
 

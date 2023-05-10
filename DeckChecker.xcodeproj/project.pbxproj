@@ -20,6 +20,10 @@
 		35F462612A0A478000D7088B /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462602A0A478000D7088B /* Deck.swift */; };
 		35F462652A0A47D100D7088B /* NotesOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462642A0A47D100D7088B /* NotesOO.swift */; };
 		35F462672A0A481800D7088B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462662A0A481800D7088B /* Note.swift */; };
+		35F462692A0B904600D7088B /* AnkiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462682A0B904600D7088B /* AnkiService.swift */; };
+		35F4626C2A0B932C00D7088B /* URLComponents+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4626B2A0B932C00D7088B /* URLComponents+.swift */; };
+		35F4626F2A0B950A00D7088B /* AnkiServiceDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4626E2A0B950A00D7088B /* AnkiServiceDataPublisher.swift */; };
+		35F462712A0B9D2A00D7088B /* Decks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462702A0B9D2A00D7088B /* Decks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		35F462602A0A478000D7088B /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		35F462642A0A47D100D7088B /* NotesOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesOO.swift; sourceTree = "<group>"; };
 		35F462662A0A481800D7088B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		35F462682A0B904600D7088B /* AnkiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiService.swift; sourceTree = "<group>"; };
+		35F4626B2A0B932C00D7088B /* URLComponents+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+.swift"; sourceTree = "<group>"; };
+		35F4626E2A0B950A00D7088B /* AnkiServiceDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiServiceDataPublisher.swift; sourceTree = "<group>"; };
+		35F462702A0B9D2A00D7088B /* Decks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,8 @@
 				35F4625A2A0A422700D7088B /* SettingsView.swift */,
 				35F4625C2A0A461E00D7088B /* Decks */,
 				35F4625D2A0A462900D7088B /* Notes */,
+				35F4626D2A0B94E100D7088B /* Services */,
+				35F4626A2A0B931200D7088B /* Extensions */,
 				35F462312A0A407700D7088B /* Assets.xcassets */,
 				35F462362A0A407700D7088B /* DeckChecker.entitlements */,
 				35F462332A0A407700D7088B /* Preview Content */,
@@ -148,6 +158,7 @@
 			children = (
 				35F4622F2A0A407600D7088B /* DecksView.swift */,
 				35F4625E2A0A474D00D7088B /* DecksOO.swift */,
+				35F462702A0B9D2A00D7088B /* Decks.swift */,
 				35F462602A0A478000D7088B /* Deck.swift */,
 			);
 			path = Decks;
@@ -161,6 +172,23 @@
 				35F462662A0A481800D7088B /* Note.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		35F4626A2A0B931200D7088B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35F4626B2A0B932C00D7088B /* URLComponents+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		35F4626D2A0B94E100D7088B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35F462682A0B904600D7088B /* AnkiService.swift */,
+				35F4626E2A0B950A00D7088B /* AnkiServiceDataPublisher.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +327,12 @@
 				35F462672A0A481800D7088B /* Note.swift in Sources */,
 				35F462592A0A41D800D7088B /* NotesView.swift in Sources */,
 				35F4625F2A0A474D00D7088B /* DecksOO.swift in Sources */,
+				35F4626F2A0B950A00D7088B /* AnkiServiceDataPublisher.swift in Sources */,
 				35F462652A0A47D100D7088B /* NotesOO.swift in Sources */,
+				35F462712A0B9D2A00D7088B /* Decks.swift in Sources */,
+				35F4626C2A0B932C00D7088B /* URLComponents+.swift in Sources */,
 				35F4622E2A0A407600D7088B /* DeckCheckerApp.swift in Sources */,
+				35F462692A0B904600D7088B /* AnkiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
