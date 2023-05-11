@@ -11,12 +11,15 @@ struct DecksView: View {
   @StateObject var decksOO = DecksOO()
   
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundColor(.accentColor)
-      Text("Hello, world!")
+    NavigationStack {
+      List(decksOO.decks.deckNames, id: \.self) { name in
+        NavigationLink(destination: CardsView(deckName: name)) {
+          Text(name)
+        }
+      }
+      .listStyle(.plain)
     }
+    .navigationTitle("Decks")
     .padding()
     .frame(minWidth: 400, idealWidth: 600, maxWidth: .infinity,
            minHeight: 300, idealHeight: 400, maxHeight: .infinity)

@@ -8,18 +8,23 @@
 import Foundation
 
 struct Decks: Decodable {
-  public var result: [String]
+  public var deckNames: [String]
   public var error: String? = nil
+  
+  private enum CodingKeys: String, CodingKey {
+    case deckNames = "result"
+    case error
+  }
   
   public static let emptyDecks: Decks = {
     return Decks(
-      result: []
+      deckNames: []
     )
   }()
   
   public static let errorDecks: Decks = {
     return Decks(
-      result: [],
+      deckNames: [],
       error: "Unknown Error"
     )
   }()
