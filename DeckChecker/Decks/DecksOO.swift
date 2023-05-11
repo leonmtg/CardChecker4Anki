@@ -33,7 +33,5 @@ class DecksOO: ObservableObject {
         print("Network request cancelled")
       })
       .assign(to: &$decks)
-    
-    
   }
 }

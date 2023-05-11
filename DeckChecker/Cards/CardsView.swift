@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CardsView: View {
+  @StateObject private var cardsOO = CardsOO()
+  
   var deckName: String
   
   var body: some View {
     Text("Hello, \(deckName)!")
+      .onAppear {
+        cardsOO.fetchCards(with: deckName)
+      }
   }
 }
 

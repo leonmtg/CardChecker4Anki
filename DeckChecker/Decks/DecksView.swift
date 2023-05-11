@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DecksView: View {
-  @StateObject var decksOO = DecksOO()
+  @StateObject private var decksOO = DecksOO()
   
   var body: some View {
     NavigationStack {
