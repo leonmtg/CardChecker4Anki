@@ -27,6 +27,7 @@
 		35F462762A0CD04E00D7088B /* CardsOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462752A0CD04E00D7088B /* CardsOO.swift */; };
 		35F462782A0CEB4500D7088B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462772A0CEB4500D7088B /* Card.swift */; };
 		35F4627C2A0CF5E300D7088B /* CardIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4627B2A0CF5E300D7088B /* CardIDs.swift */; };
+		35F4627E2A0CFE3B00D7088B /* CardInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4627D2A0CFE3B00D7088B /* CardInfos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		35F462752A0CD04E00D7088B /* CardsOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsOO.swift; sourceTree = "<group>"; };
 		35F462772A0CEB4500D7088B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		35F4627B2A0CF5E300D7088B /* CardIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIDs.swift; sourceTree = "<group>"; };
+		35F4627D2A0CFE3B00D7088B /* CardInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				35F462732A0CD04200D7088B /* CardsView.swift */,
 				35F462752A0CD04E00D7088B /* CardsOO.swift */,
 				35F4627B2A0CF5E300D7088B /* CardIDs.swift */,
+				35F4627D2A0CFE3B00D7088B /* CardInfos.swift */,
 				35F462772A0CEB4500D7088B /* Card.swift */,
 			);
 			path = Cards;
@@ -341,6 +344,7 @@
 				35F462302A0A407600D7088B /* DecksView.swift in Sources */,
 				35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */,
 				35F462672A0A481800D7088B /* Note.swift in Sources */,
+				35F4627E2A0CFE3B00D7088B /* CardInfos.swift in Sources */,
 				35F462592A0A41D800D7088B /* NotesView.swift in Sources */,
 				35F4625F2A0A474D00D7088B /* DecksOO.swift in Sources */,
 				35F4626F2A0B950A00D7088B /* AnkiServiceDataPublisher.swift in Sources */,

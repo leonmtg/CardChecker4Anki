@@ -9,4 +9,13 @@ import Foundation
 
 struct Card: Decodable, Identifiable {
   var id: Int
+  
+  var deckName: String
+  var modelName: String
+  
+  private enum CodingKeys: String, CodingKey {
+    case id = "cardId"
+    case deckName
+    case modelName
+  }
 }

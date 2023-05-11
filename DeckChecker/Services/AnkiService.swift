@@ -39,9 +39,29 @@ public struct AnkiService {
       "action": "findCards",
       "version": 6,
       "params": [
-        "query": "deck:\(deckName)"
+        "query": "\"deck:\(deckName)\""
       ]
     ]
+    let jsonData = try? JSONSerialization.data(withJSONObject: json)
+    
+    let url = urlComponents.url!
+    var request = URLRequest(url: url)
+    
+    request.httpMethod = "POST"
+    request.httpBody = jsonData
+    
+    return request
+  }
+  
+  private func cardInfosRequest(ids: [Int]) -> URLRequest {
+    let json: [String: Any] = [
+      "action": "cardsInfo",
+      "version": 6,
+      "params": [
+        "cards": ids
+      ]
+    ]
+    
     let jsonData = try? JSONSerialization.data(withJSONObject: json)
     
     let url = urlComponents.url!
@@ -66,6 +86,14 @@ extension AnkiService: AnkiServiceDataPublisher {
   public func cardsPublisher(for deckName: String) -> AnyPublisher<Data, URLError> {
     URLSession.shared
       .dataTaskPublisher(for: self.cardsUrlRequest(deckName: deckName))
+      .subscribe(on: DispatchQueue.global(qos: .default))
+      .map(\.data)
+      .eraseToAnyPublisher()
+  }
+  
+  public func cardInfosPublisher(for ids: [Int]) -> AnyPublisher<Data, URLError> {
+    URLSession.shared
+      .dataTaskPublisher(for: self.cardInfosRequest(ids: ids))
       .subscribe(on: DispatchQueue.global(qos: .default))
       .map(\.data)
       .eraseToAnyPublisher()
