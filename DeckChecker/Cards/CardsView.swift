@@ -13,10 +13,15 @@ struct CardsView: View {
   var deckName: String
   
   var body: some View {
-    Text("Hello, \(deckName)!")
-      .onAppear {
-        cardsOO.fetchCards(with: deckName)
+    HStack {
+      Text("Hello, \(deckName)!")
+      if cardsOO.fetching {
+        ProgressView()
       }
+    }
+    .onAppear {
+      cardsOO.fetchCards(with: deckName)
+    }
   }
 }
 
