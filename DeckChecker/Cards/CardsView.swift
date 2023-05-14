@@ -13,14 +13,19 @@ struct CardsView: View {
   var deckName: String
   
   var body: some View {
-    HStack {
-      Text("Hello, \(deckName)!")
-      if cardsOO.fetching {
-        ProgressView()
+    VStack {
+      HStack {
+        Text("Hello, \(deckName)!")
+        if cardsOO.fetching {
+          ProgressView()
+        }
       }
-    }
-    .onAppear {
-      cardsOO.fetchCards(with: deckName)
+      .onAppear {
+        cardsOO.fetchCards(with: deckName)
+      }
+      List(cardsOO.cards, id:\.id) { card in
+        Text(card.orderFieldValue)
+      }
     }
   }
 }

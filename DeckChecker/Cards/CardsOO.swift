@@ -69,8 +69,7 @@ class CardsOO: ObservableObject {
         if let error = cardInfo.error {
           self.errorForView = ErrorForView(message: error)
         } else {
-          self.cards = cardInfo.cards
-          print(self.cards.first!)
+          self.cards = cardInfo.cards          
         }
       }
     

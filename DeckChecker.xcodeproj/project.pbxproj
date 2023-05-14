@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35D277E62A10907A00041153 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D277E52A10907A00041153 /* Field.swift */; };
 		35F4622E2A0A407600D7088B /* DeckCheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */; };
 		35F462302A0A407600D7088B /* DecksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622F2A0A407600D7088B /* DecksView.swift */; };
 		35F462322A0A407700D7088B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F462312A0A407700D7088B /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35D277E52A10907A00041153 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		35F4622A2A0A407600D7088B /* DeckChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerApp.swift; sourceTree = "<group>"; };
 		35F4622F2A0A407600D7088B /* DecksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				35F4627B2A0CF5E300D7088B /* CardIDs.swift */,
 				35F4627D2A0CFE3B00D7088B /* CardInfos.swift */,
 				35F462772A0CEB4500D7088B /* Card.swift */,
+				35D277E52A10907A00041153 /* Field.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F462302A0A407600D7088B /* DecksView.swift in Sources */,
+				35D277E62A10907A00041153 /* Field.swift in Sources */,
 				35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */,
 				35F462672A0A481800D7088B /* Note.swift in Sources */,
 				35F4627E2A0CFE3B00D7088B /* CardInfos.swift in Sources */,
