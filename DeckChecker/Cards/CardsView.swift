@@ -27,6 +27,9 @@ struct CardsView: View {
         Text(card.orderFieldValue)
       }
     }
+    .toolbar {
+      CardsToolbarItems(cardsOO: cardsOO)
+    }
   }
 }
 

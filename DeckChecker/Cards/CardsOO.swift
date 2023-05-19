@@ -15,13 +15,13 @@ struct ErrorForView: Error, Identifiable {
 
 class CardsOO: ObservableObject {
   private var deckName: String?
-    
+  
+  private let ankiService: AnkiServiceDataPublisher
+  private var cancellables: Set<AnyCancellable> = []
+  
   @Published public var cards: [Card] = []
   @Published public var errorForView: ErrorForView?
   @Published public var fetching = false
-  
-  private let ankiService: AnkiServiceDataPublisher
-  private var cancellable: AnyCancellable?
   
   public init(ankiService: AnkiServiceDataPublisher = AnkiService()) {
     self.ankiService = ankiService
@@ -35,7 +35,7 @@ class CardsOO: ObservableObject {
   public func fetchCards(with deckName: String) {
     self.deckName = deckName
     
-    cancellable = ankiService.cardsPublisher(for: deckName)
+    ankiService.cardsPublisher(for: deckName)
       .decode(type: CardIDs.self, decoder: JSONDecoder())
       .map { [unowned self] cardIDs in
         if cardIDs.ids.count > 0 {
@@ -69,9 +69,24 @@ class CardsOO: ObservableObject {
         if let error = cardInfo.error {
           self.errorForView = ErrorForView(message: error)
         } else {
-          self.cards = cardInfo.cards          
+          self.cards = cardInfo.cards
         }
       }
+      .store(in: &cancellables)
+  }
+  
+  public func checkDuplicates() {
+    let sortedCards = cards
+      .map { card in
+        return card.orderFieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
+      }
+      .sorted { $0 < $1 }
     
+    sortedCards.publisher
+      .findDuplicates()
+      .sink(receiveValue: { dup in
+        print(dup)
+      })
+      .store(in: &cancellables)
   }
 }
