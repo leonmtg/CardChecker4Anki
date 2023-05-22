@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3588A6B42A1B6F6A00F64294 /* DuplicateCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3588A6B32A1B6F6A00F64294 /* DuplicateCardsView.swift */; };
 		35D277E62A10907A00041153 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D277E52A10907A00041153 /* Field.swift */; };
 		35D277E92A10A34400041153 /* CardsToolbarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D277E82A10A34400041153 /* CardsToolbarItems.swift */; };
-		35D277EB2A10BB5B00041153 /* FilterDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D277EA2A10BB5B00041153 /* FilterDuplicates.swift */; };
+		35D277EB2A10BB5B00041153 /* FindDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D277EA2A10BB5B00041153 /* FindDuplicates.swift */; };
 		35F4622E2A0A407600D7088B /* DeckCheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */; };
 		35F462302A0A407600D7088B /* DecksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4622F2A0A407600D7088B /* DecksView.swift */; };
 		35F462322A0A407700D7088B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F462312A0A407700D7088B /* Assets.xcassets */; };
@@ -17,11 +18,8 @@
 		35F462402A0A407700D7088B /* DeckCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4623F2A0A407700D7088B /* DeckCheckerTests.swift */; };
 		35F4624A2A0A407700D7088B /* DeckCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462492A0A407700D7088B /* DeckCheckerUITests.swift */; };
 		35F4624C2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4624B2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift */; };
-		35F462592A0A41D800D7088B /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462582A0A41D800D7088B /* NotesView.swift */; };
 		35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4625A2A0A422700D7088B /* SettingsView.swift */; };
 		35F4625F2A0A474D00D7088B /* DecksOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4625E2A0A474D00D7088B /* DecksOO.swift */; };
-		35F462652A0A47D100D7088B /* NotesOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462642A0A47D100D7088B /* NotesOO.swift */; };
-		35F462672A0A481800D7088B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462662A0A481800D7088B /* Note.swift */; };
 		35F462692A0B904600D7088B /* AnkiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F462682A0B904600D7088B /* AnkiService.swift */; };
 		35F4626C2A0B932C00D7088B /* URLComponents+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4626B2A0B932C00D7088B /* URLComponents+.swift */; };
 		35F4626F2A0B950A00D7088B /* AnkiServiceDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4626E2A0B950A00D7088B /* AnkiServiceDataPublisher.swift */; };
@@ -51,9 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3588A6B32A1B6F6A00F64294 /* DuplicateCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateCardsView.swift; sourceTree = "<group>"; };
 		35D277E52A10907A00041153 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		35D277E82A10A34400041153 /* CardsToolbarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsToolbarItems.swift; sourceTree = "<group>"; };
-		35D277EA2A10BB5B00041153 /* FilterDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDuplicates.swift; sourceTree = "<group>"; };
+		35D277EA2A10BB5B00041153 /* FindDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindDuplicates.swift; sourceTree = "<group>"; };
 		35F4622A2A0A407600D7088B /* DeckChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F4622D2A0A407600D7088B /* DeckCheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerApp.swift; sourceTree = "<group>"; };
 		35F4622F2A0A407600D7088B /* DecksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksView.swift; sourceTree = "<group>"; };
@@ -65,11 +64,8 @@
 		35F462452A0A407700D7088B /* DeckCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeckCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F462492A0A407700D7088B /* DeckCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerUITests.swift; sourceTree = "<group>"; };
 		35F4624B2A0A407700D7088B /* DeckCheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		35F462582A0A41D800D7088B /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		35F4625A2A0A422700D7088B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		35F4625E2A0A474D00D7088B /* DecksOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksOO.swift; sourceTree = "<group>"; };
-		35F462642A0A47D100D7088B /* NotesOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesOO.swift; sourceTree = "<group>"; };
-		35F462662A0A481800D7088B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		35F462682A0B904600D7088B /* AnkiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiService.swift; sourceTree = "<group>"; };
 		35F4626B2A0B932C00D7088B /* URLComponents+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+.swift"; sourceTree = "<group>"; };
 		35F4626E2A0B950A00D7088B /* AnkiServiceDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiServiceDataPublisher.swift; sourceTree = "<group>"; };
@@ -142,7 +138,6 @@
 				35F4625C2A0A461E00D7088B /* Decks */,
 				35F462722A0CD01E00D7088B /* Cards */,
 				35D277E72A10A30800041153 /* Field */,
-				35F4625D2A0A462900D7088B /* Notes */,
 				35F4626D2A0B94E100D7088B /* Services */,
 				35F4626A2A0B931200D7088B /* Extensions */,
 				35F462312A0A407700D7088B /* Assets.xcassets */,
@@ -187,21 +182,11 @@
 			path = Decks;
 			sourceTree = "<group>";
 		};
-		35F4625D2A0A462900D7088B /* Notes */ = {
-			isa = PBXGroup;
-			children = (
-				35F462582A0A41D800D7088B /* NotesView.swift */,
-				35F462642A0A47D100D7088B /* NotesOO.swift */,
-				35F462662A0A481800D7088B /* Note.swift */,
-			);
-			path = Notes;
-			sourceTree = "<group>";
-		};
 		35F4626A2A0B931200D7088B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				35F4626B2A0B932C00D7088B /* URLComponents+.swift */,
-				35D277EA2A10BB5B00041153 /* FilterDuplicates.swift */,
+				35D277EA2A10BB5B00041153 /* FindDuplicates.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				35F462732A0CD04200D7088B /* CardsView.swift */,
+				3588A6B32A1B6F6A00F64294 /* DuplicateCardsView.swift */,
 				35D277E82A10A34400041153 /* CardsToolbarItems.swift */,
 				35F462752A0CD04E00D7088B /* CardsOO.swift */,
 				35F4627B2A0CF5E300D7088B /* CardIDs.swift */,
@@ -358,19 +344,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3588A6B42A1B6F6A00F64294 /* DuplicateCardsView.swift in Sources */,
 				35F462302A0A407600D7088B /* DecksView.swift in Sources */,
 				35D277E62A10907A00041153 /* Field.swift in Sources */,
 				35F4625B2A0A422700D7088B /* SettingsView.swift in Sources */,
-				35F462672A0A481800D7088B /* Note.swift in Sources */,
 				35F4627E2A0CFE3B00D7088B /* CardInfos.swift in Sources */,
-				35F462592A0A41D800D7088B /* NotesView.swift in Sources */,
-				35D277EB2A10BB5B00041153 /* FilterDuplicates.swift in Sources */,
+				35D277EB2A10BB5B00041153 /* FindDuplicates.swift in Sources */,
 				35D277E92A10A34400041153 /* CardsToolbarItems.swift in Sources */,
 				35F4625F2A0A474D00D7088B /* DecksOO.swift in Sources */,
 				35F4626F2A0B950A00D7088B /* AnkiServiceDataPublisher.swift in Sources */,
 				35F4627C2A0CF5E300D7088B /* CardIDs.swift in Sources */,
 				35F462762A0CD04E00D7088B /* CardsOO.swift in Sources */,
-				35F462652A0A47D100D7088B /* NotesOO.swift in Sources */,
 				35F462712A0B9D2A00D7088B /* Decks.swift in Sources */,
 				35F462782A0CEB4500D7088B /* Card.swift in Sources */,
 				35F462742A0CD04200D7088B /* CardsView.swift in Sources */,

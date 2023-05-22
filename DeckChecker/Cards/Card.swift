@@ -19,6 +19,9 @@ struct Card: Decodable, Identifiable {
   var fieldOrder: Int
   var fields: [String:Field]
   
+  var queue: Int
+  var due: Int
+  
   private enum CodingKeys: String, CodingKey {
     case id = "cardId"
     case deckName
@@ -27,6 +30,8 @@ struct Card: Decodable, Identifiable {
     case answer
     case fieldOrder
     case fields
+    case queue
+    case due
   }
   
   init(from decoder: Decoder) throws {
@@ -36,6 +41,8 @@ struct Card: Decodable, Identifiable {
     self.modelName = try container.decode(String.self, forKey: .modelName)
     self.question = try container.decode(String.self, forKey: .question)
     self.answer = try container.decode(String.self, forKey: .answer)
+    self.queue = try container.decode(Int.self, forKey: .queue)
+    self.due = try container.decode(Int.self, forKey: .due)
     
     let fieldOrder = try container.decode(Int.self, forKey: .fieldOrder)
     self.fieldOrder = fieldOrder

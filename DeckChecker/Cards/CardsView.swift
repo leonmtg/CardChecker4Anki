@@ -24,11 +24,27 @@ struct CardsView: View {
         cardsOO.fetchCards(with: deckName)
       }
       List(cardsOO.cards, id:\.id) { card in
-        Text(card.orderFieldValue)
+        ZStack {
+          if card.queue < 0 {
+            Color.yellow
+          } else if card.queue > 0 {
+            Color.green
+          } else {
+            Color.white
+          }
+          HStack {
+            Text(card.orderFieldValue)
+            Spacer()
+            Text("\(card.due)")
+          }
+        }
       }
     }
     .toolbar {
       CardsToolbarItems(cardsOO: cardsOO)
+    }
+    .sheet(isPresented: $cardsOO.showDuplicates) {
+      DuplicateCardsView(cardsOO: cardsOO)
     }
   }
 }

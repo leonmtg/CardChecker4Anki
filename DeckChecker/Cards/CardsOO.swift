@@ -22,6 +22,8 @@ class CardsOO: ObservableObject {
   @Published public var cards: [Card] = []
   @Published public var errorForView: ErrorForView?
   @Published public var fetching = false
+  @Published public var duplicateCards: [Card] = []
+  @Published public var showDuplicates = false
   
   public init(ankiService: AnkiServiceDataPublisher = AnkiService()) {
     self.ankiService = ankiService
@@ -65,7 +67,7 @@ class CardsOO: ObservableObject {
         if case .failure(let error) = completion {
           self.errorForView = error
         }
-      } receiveValue: { cardInfo in
+      } receiveValue: { [unowned self] cardInfo in
         if let error = cardInfo.error {
           self.errorForView = ErrorForView(message: error)
         } else {
@@ -76,17 +78,25 @@ class CardsOO: ObservableObject {
   }
   
   public func checkDuplicates() {
+    showDuplicates = true
+    
     let sortedCards = cards
-      .map { card in
-        return card.orderFieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
-      }
-      .sorted { $0 < $1 }
+      .sorted { $0.trimmedOrderFieldValue < $1.trimmedOrderFieldValue }
     
     sortedCards.publisher
-      .findDuplicates()
-      .sink(receiveValue: { dup in
-        print(dup)
+      .findDuplicates {
+        $0.trimmedOrderFieldValue == $1.trimmedOrderFieldValue
+      }
+      .collect()
+      .sink(receiveValue: { [unowned self] duplicates in
+        self.duplicateCards = duplicates
       })
       .store(in: &cancellables)
+  }
+}
+
+extension Card {
+  var trimmedOrderFieldValue: String {
+    return self.orderFieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
   }
 }
