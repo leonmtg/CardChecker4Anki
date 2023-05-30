@@ -84,7 +84,7 @@ class CardsOO: ObservableObject {
       .sorted { $0.trimmedOrderFieldValue < $1.trimmedOrderFieldValue }
     
     sortedCards.publisher
-      .findDuplicates {
+      .findDuplicates2 {
         $0.trimmedOrderFieldValue == $1.trimmedOrderFieldValue
       }
       .collect()
